@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="FutbolSolution.WPF.Views.MainView.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FutbolSolution.WPF.Views.MainView"
+             xmlns:cc="clr-namespace:FutbolSolution.WPF.UserControls.Tag"
+             xmlns:tc="clr-namespace:FutbolSolution.WPF.UserControls.TrendCards"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel
+  Margin="40">
+
+
+
+        <!--#region Hot & New Title & Cards-->
+        <!--Title-->
+        <Grid
+      Margin="0,20,0,0">
+            <TextBlock
+          Foreground="{StaticResource SecondaryBrush}"
+          FontWeight="SemiBold"
+          FontSize="22"
+          Text="Hot &amp; New"
+          VerticalAlignment="Bottom"/>
+        </Grid>
+
+        <!--Cards-->
+        <StackPanel
+      Orientation="Horizontal"
+      Margin="0,10,0,0">
+            <Grid
+          Background="{StaticResource PrimaryBrush}"
+          Height="275"
+          Width="615"
+          Margin="0,0,15,0">
+
+                <!--Game Character Background-->
+                <Image
+              Source="/assets/foto.jpg"
+              Stretch="UniformToFill"/>
+
+                <!--Overlay-->
+                <Grid
+              Background="{StaticResource GradientBrush}"/>
+
+                <!--Tags-->
+                <StackPanel
+              Orientation="Horizontal"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="39,105,0,0">
+                    <cc:tag
+                  Margin="0,0,5,0"
+                  Text="Simulation"/>
+                    <cc:tag
+                  Margin="0,0,5,0"
+                  Text="Compare"/>
+                    <cc:tag
+                  Text="Football"/>
+                </StackPanel>
+
+                <!--Title-->
+                <TextBlock
+              HorizontalAlignment="Left"
+              Margin="30,146,0,0"                            
+              TextWrapping="Wrap"
+              VerticalAlignment="Top"
+              FontSize="40"
+              FontWeight="Bold"
+              Foreground="{StaticResource SecondaryBrush}"><Run Text="Team Comparing"/><LineBreak/><Run Text="Simulation"/></TextBlock>
+            </Grid>
+
+            <!--Repeat...-->
+            <Grid
+          Background="{StaticResource PrimaryBrush}"
+          Height="275"
+          Width="615"
+          Margin="0,0,15,0">
+
+                <!--Game Character Background-->
+                <Image
+              Source="/assets/futball.jpg"
+              Stretch="UniformToFill"/>
+                <!--Overlay-->
+                <Grid
+              Background="{StaticResource GradientBrush}"/>
+
+
+                <!--Tags-->
+                <StackPanel
+              Orientation="Horizontal"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top"
+              Margin="39,105,0,0">
+                    <cc:tag
+                  Margin="0,0,5,0"
+                  Text="Redesign"/>
+                    <cc:tag
+                  Margin="0,0,5,0"
+                  Text="Config"/>
+                </StackPanel>
+
+                <!--Title-->
+                <TextBlock
+              HorizontalAlignment="Left"
+              Margin="30,146,0,0"                            
+              TextWrapping="Wrap"
+              VerticalAlignment="Top"
+              FontSize="40"
+              FontWeight="Bold"
+              Foreground="{StaticResource SecondaryBrush}"><Run Text="Simulation"/><LineBreak/><Run Text="Configuration"/></TextBlock>
+            </Grid>
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region Hot & New Title & Cards-->
+        <!--Title-->
+        <Grid
+      Margin="0,20,0,0">
+            <TextBlock
+          Foreground="{StaticResource SecondaryBrush}"
+          FontWeight="SemiBold"
+          FontSize="22"
+          Text="Operations"
+          VerticalAlignment="Bottom"/>
+        </Grid>
+        <!--Cards-->
+        <StackPanel
+      Orientation="Horizontal"
+      Margin="0,10,0,0">
+            <tc:TrendingCards
+          ImageSource="/assets/makeanalys.jpg"
+          Title="Simulation"
+          WindowsCompatible="True"
+          MacCompatible="True"
+          SteamCompatible="True"
+          Margin="0,0,15,0"
+          MouseDoubleClick="TrendingCards_MouseDoubleClick_Sim"
+          BitmapEffect="{StaticResource BottomShadowEffect}"/>
+
+            <!--Repeat...-->
+            <tc:TrendingCards
+          ImageSource="/assets/confignew.png"
+          Title="Coefficient Config"
+          WindowsCompatible="True"
+          MacCompatible="True"
+          SteamCompatible="False"
+          Margin="0,0,15,0"
+          MouseDoubleClick="TrendingCards_MouseDoubleClick_Coefficient"
+          BitmapEffect="{StaticResource BottomShadowEffect}"/>
+
+        </StackPanel>
+        <!--#endregion-->
+    </StackPanel>
+</UserControl>

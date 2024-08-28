@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="FutbolSolution.WPF.Views.TeamView.MainTeamView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FutbolSolution.WPF.Views.TeamView"
+             xmlns:dtos="clr-namespace:FutbolSolution.Core.DTOs.TeamDTOs;assembly=FutbolSolution.Core"
+             xmlns:customDataGrid="clr-namespace:FutbolSolution.WPF.UserControls.CustomDataGrid" 
+             xmlns:datagridModel="clr-namespace:FutbolSolution.WPF.Utils"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <customDataGrid:CustomDataGrid
+        ItemsSource="{Binding Teams}" 
+        ItemType="{x:Type datagridModel:TeamDataGridItem}" />
+    </Grid>
+</UserControl>

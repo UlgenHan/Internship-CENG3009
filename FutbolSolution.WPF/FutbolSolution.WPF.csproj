@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C44D9402-4B6E-44D3-9462-ED5D7169753A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FutbolSolution.WPF</RootNamespace>
+    <AssemblyName>FutbolSolution.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.6.0.0\lib\net461\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.FileExtensions.6.0.0\lib\net461\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Json.6.0.0\lib\net461\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Physical.6.0.0\lib\net461\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileSystemGlobbing.6.0.0\lib\net461\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.6.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Configuration\AppSettings.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ByteArrayToImageConverter.cs" />
+    <Compile Include="Converters\ByteArrayToVisibilityConverter.cs" />
+    <Compile Include="Converters\EqualityConverter.cs" />
+    <Compile Include="Converters\StringAndParameterToBooleanConverter.cs" />
+    <Compile Include="Services\Navigation\INavigable.cs" />
+    <Compile Include="Services\Navigation\INavigationService.cs" />
+    <Compile Include="Services\Navigation\NavigationEntry.cs" />
+    <Compile Include="Services\Navigation\NavigationService.cs" />
+    <Compile Include="Services\Search\ISearchService.cs" />
+    <Compile Include="Services\Search\SearchResult.cs" />
+    <Compile Include="Services\Search\SearchService.cs" />
+    <Compile Include="UserControls\CustomDataGrid\CustomDataGrid.xaml.cs">
+      <DependentUpon>CustomDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchBox\SearchBox.xaml.cs">
+      <DependentUpon>SearchBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Tag\tag.xaml.cs">
+      <DependentUpon>tag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TrendCards\TrendingCards.xaml.cs">
+      <DependentUpon>TrendingCards.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CoefficientHolder.cs" />
+    <Compile Include="Utils\HelperModels\PlayerHolder.cs" />
+    <Compile Include="Utils\HelperModels\RefereeHolder.cs" />
+    <Compile Include="Utils\HelperModels\RegressionCalculationDataFrame.cs" />
+    <Compile Include="Utils\HelperModels\RegressionDataFrameHolder.cs" />
+    <Compile Include="Utils\HelperModels\TeamHolder.cs" />
+    <Compile Include="Utils\MatchDataGrid.cs" />
+    <Compile Include="Utils\MatchHolder.cs" />
+    <Compile Include="Utils\PlayerDataGridItem.cs" />
+    <Compile Include="Utils\PropertyFilter.cs" />
+    <Compile Include="Utils\RefereeDataGridItem.cs" />
+    <Compile Include="Utils\RelayCommand.cs" />
+    <Compile Include="Utils\TeamDataGridItem.cs" />
+    <Compile Include="Validations\BaseEntityValidator.cs" />
+    <Compile Include="Validations\IEntityValidator.cs" />
+    <Compile Include="Validations\InjuriesSuspensionsValidator.cs" />
+    <Compile Include="Validations\MatchStatsValidator.cs" />
+    <Compile Include="Validations\MatchValidator.cs" />
+    <Compile Include="Validations\PlayerStatsValidator.cs" />
+    <Compile Include="Validations\PlayerValidator.cs" />
+    <Compile Include="Validations\RefereeValidator.cs" />
+    <Compile Include="Validations\TeamStatisticsValidator.cs" />
+    <Compile Include="Validations\TeamValidator.cs" />
+    <Compile Include="ViewModels\AnalysisViewModel\AnalysisViewModel.cs" />
+    <Compile Include="ViewModels\CoefficientViewModel\CoefficientViewModel.cs" />
+    <Compile Include="ViewModels\InjuresSuspensionViewModel\CreateInjuresSuspensionViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel\SecondViewModel.cs" />
+    <Compile Include="ViewModels\MatchViewModel\CheckMatchViewModel.cs" />
+    <Compile Include="ViewModels\MatchViewModel\CreateMatchViewModel.cs" />
+    <Compile Include="ViewModels\MatchViewModel\MainMatchViewModel.cs" />
+    <Compile Include="ViewModels\MatchViewModel\UpdateMatchStatsViewModel.cs" />
+    <Compile Include="ViewModels\MatchViewModel\UpdateMatchViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel\CheckPlayerViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel\CreatePlayerViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel\UpdatePlayerStatsViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel\UpdatePlayerViewModel.cs" />
+    <Compile Include="ViewModels\RefereeViewModel\CreateRefereeViewModel.cs" />
+    <Compile Include="ViewModels\RefereeViewModel\MainRefereeViewModel.cs" />
+    <Compile Include="ViewModels\RefereeViewModel\UpdateRefereeViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel\CheckTeamViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel\CreateTeamViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel\MainTeamViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel\UpdateTeamStatsViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel\UpdateTeamViewModel.cs" />
+    <Compile Include="Views\AnalysisView\AnalysisView.xaml.cs">
+      <DependentUpon>AnalysisView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CoefficientView\CoefficientView.xaml.cs">
+      <DependentUpon>CoefficientView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InjuresSuspensionView\CreateInjuresSuspensionView.xaml.cs">
+      <DependentUpon>CreateInjuresSuspensionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchView\CheckMatchView.xaml.cs">
+      <DependentUpon>CheckMatchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchView\CreateMatchView.xaml.cs">
+      <DependentUpon>CreateMatchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchView\MainMatchView.xaml.cs">
+      <DependentUpon>MainMatchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchView\UpdateMatchStatsView.xaml.cs">
+      <DependentUpon>UpdateMatchStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchView\UpdateMatchView.xaml.cs">
+      <DependentUpon>UpdateMatchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView\CheckPlayerView.xaml.cs">
+      <DependentUpon>CheckPlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView\CreatePlayerView.xaml.cs">
+      <DependentUpon>CreatePlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\PlayerViewModel\MainPlayerViewModel.cs" />
+    <Compile Include="ViewModels\SearchViewModel\SearchViewModel.cs" />
+    <Compile Include="Views\MainView\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView\MainPlayerView.xaml.cs">
+      <DependentUpon>MainPlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView\UpdatePlayerStatsView.xaml.cs">
+      <DependentUpon>UpdatePlayerStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerView\UpdatePlayerView.xaml.cs">
+      <DependentUpon>UpdatePlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RefereeView\CreateRefereeView.xaml.cs">
+      <DependentUpon>CreateRefereeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RefereeView\MainRefereeView.xaml.cs">
+      <DependentUpon>MainRefereeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RefereeView\UpdateRefereeView.xaml.cs">
+      <DependentUpon>UpdateRefereeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView\CheckTeamView.xaml.cs">
+      <DependentUpon>CheckTeamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView\CreateTeamView.xaml.cs">
+      <DependentUpon>CreateTeamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView\MainTeamView.xaml.cs">
+      <DependentUpon>MainTeamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView\UpdateTeamStatsView.xaml.cs">
+      <DependentUpon>UpdateTeamStatsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView\UpdateTeamView.xaml.cs">
+      <DependentUpon>UpdateTeamView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DarkThemeMessageBox.xaml.cs">
+      <DependentUpon>DarkThemeMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UserControls\CustomDataGrid\CustomDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SearchBox\SearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Tag\tag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TrendCards\TrendingCards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AnalysisView\AnalysisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CoefficientView\CoefficientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InjuresSuspensionView\CreateInjuresSuspensionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MatchView\CheckMatchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MatchView\CreateMatchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MatchView\MainMatchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MatchView\UpdateMatchStatsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MatchView\UpdateMatchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerView\CheckPlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerView\CreatePlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerView\MainPlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerView\UpdatePlayerStatsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PlayerView\UpdatePlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RefereeView\CreateRefereeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RefereeView\MainRefereeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RefereeView\UpdateRefereeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView\CheckTeamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView\CreateTeamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView\MainTeamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView\UpdateTeamStatsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamView\UpdateTeamView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DarkThemeMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\config.webp" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FutbolSolution.Analyzer\FutbolSolution.Analyzer.csproj">
+      <Project>{c5e4a5b2-564a-48d3-bed5-e65b69e1076b}</Project>
+      <Name>FutbolSolution.Analyzer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FutbolSolution.Core\FutbolSolution.Core.csproj">
+      <Project>{836ac437-164a-4687-9c50-a746ff7315c2}</Project>
+      <Name>FutbolSolution.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FutbolSolution.Repository\FutbolSolution.Repository.csproj">
+      <Project>{f596dddb-9110-497a-bf3a-f1dd03e34b15}</Project>
+      <Name>FutbolSolution.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FutbolSolution.Service\FutbolSolution.Service.csproj">
+      <Project>{f62f20ca-c3d9-40ce-8650-4e47e9491f59}</Project>
+      <Name>FutbolSolution.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\confignew.png" />
+    <Resource Include="Assets\foto.jpg" />
+    <Resource Include="Assets\futball.jpg" />
+    <Resource Include="Assets\makeanalys.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\FileOp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\soccer.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
